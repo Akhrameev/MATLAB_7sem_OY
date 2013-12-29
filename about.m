@@ -71,4 +71,4 @@ function varargout = about_OutputFcn(hObject, eventdata, handles)
 
 % Get default command line output from handles structure
 varargout{1} = handles.output;
-imshow('gravatar.jpeg');
+imshow('Settings/gravatar.jpeg');

@@ -150,6 +150,8 @@ createWaitbar (handles.figres, waitbarTag());
 makeWaitbarContinious (waitbarTag());
 correctWaitbarPosition (handles);
 
+set (hObject, 'Name', 'Результат расчета задачи оптимального управления');
+
 function tag = waitbarTag ()
 tag = 'res';
 

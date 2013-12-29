@@ -1,3 +1,3 @@
 function [du] = H(x,t,u,p)
-	 du = p(1)*u(1)-(x(1)-sin(t))^2;
+	 du = -u(1)^2+p(1)*u(1)-x(1)^2;
 end
