@@ -215,11 +215,7 @@ try
         else
             html = strcat(html,html_vertic_alt);
         end
-        try
-            showCustomWaitbar (i, totalIterations, waitbarTag());
-        catch e
-            
-        end
+        showCustomWaitbar ();
     end
     html = strcat(html,html_last);
     hfig = handles.figres;
@@ -258,11 +254,6 @@ try
             html = strcat(html,html_vertic);
         else
             html = strcat(html,html_vertic_alt);
-        end
-        try
-            showCustomWaitbar (i + sizeT(1), totalIterations, waitbarTag());
-        catch e
-            
         end
     end
     html = strcat(html,html_last);
