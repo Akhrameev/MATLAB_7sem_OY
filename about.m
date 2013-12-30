@@ -55,6 +55,8 @@ function about_OpeningFcn(hObject, eventdata, handles, varargin)
 % Choose default command line output for about
 handles.output = hObject;
 
+set (hObject, 'Name', 'О программе');
+
 % Update handles structure
 guidata(hObject, handles);
 
