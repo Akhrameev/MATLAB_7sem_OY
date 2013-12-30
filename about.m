@@ -57,6 +57,8 @@ handles.output = hObject;
 
 set (hObject, 'Name', 'О программе');
 
+set (handles.axes1, 'Visible', 'off');
+
 % Update handles structure
 guidata(hObject, handles);
 
@@ -73,4 +75,5 @@ function varargout = about_OutputFcn(hObject, eventdata, handles)
 
 % Get default command line output from handles structure
 varargout{1} = handles.output;
+set (handles.axes1, 'Visible', 'on');
 imshow('Settings/gravatar.jpeg');
