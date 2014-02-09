@@ -65,7 +65,7 @@ global progressbarOK graphicsData currentExample;
 progressbarOK = 0;
 graphicsData = 0;
 set (hObject, 'Name', 'Практикум. 7 семестр. Решение задач оптимального управления. Исходный код: https://github.com/Akhrameev/MATLAB_7sem_OY');
-addPath ('Computing/');
+addpath ('Computing/');
 addpath ('Computing/ComputingTmp/');
 addpath ('JavaWaitbar/');
 createWaitbar (handles.figure1, waitbarTag());
