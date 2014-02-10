@@ -788,6 +788,9 @@ try
     set(handles.resultsTag,'Visible','on');
 catch e
     warndlg(e.message, 'Ошибка!');
+    closeWaitbar (waitbarTag());
+    set(handles.resultsTag,'Enable','off');
+    set(handles.resultsTag,'Visible','off');
 end
 
 % --- Executes on button press in resultsTag.
@@ -910,7 +913,9 @@ uk = u;
 vk = zeros(size(u));
 for j=1:5
     for i=1:numberOfSteps
-        vk(i,:) = uk(i,:) + 0.25*Hu(x(i,:),T(i),uk(i,:),p(i,:));
+        tmp(i,:) = 0.25*Hu(x(i,:),T(i),uk(i,:),p(i,:));
+        vk(i,:) = uk(i,:) + tmp(i);
+        %vk(i,:) = uk(i,:) + 0.25*Hu(x(i,:),T(i),uk(i,:),p(i,:));
     end
     vk = proj(handles,vk);
     if norm(uk - vk)<0.01
