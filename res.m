@@ -202,7 +202,7 @@ try
     for i = 1:sizeT(1)
         for j = 1:trajectoryDimension+2
            if j == 1
-               html = strcat(html, num2str(j));
+               html = strcat(html, num2str(i));
            else
                html = strcat(html, num2str(Tr(i,j-1)));
            end
@@ -246,7 +246,7 @@ try
     for i = 1:sizeT(1)
         for j = 1:managementDimension+2
             if j == 1
-               html = strcat(html, num2str(j));
+               html = strcat(html, num2str(i));
            else
                html = strcat(html, num2str(C(i,j-1)));
             end
